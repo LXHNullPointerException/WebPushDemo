@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		
+		<meta charset="utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no" />
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit" />
+		<meta name="MobileOptimized" content="320" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta content="telephone=no" name="format-detection" />
+		<title></title>
+		
+		<!-- 公共 CSS 部分开始 -->
+		<link rel="stylesheet" href="libs/spice/css/spice.min.css" />
+		<!-- 字体图标样式，不需要时可不引用 -->
+		<link rel="stylesheet" href="libs/spice/css/spice.icon.min.css" />
+		<!-- 公共 CSS 部分结束 -->
+		<link rel="stylesheet" type="text/css" href="libs/spice/js/cloudzoom/css/cloudzoom.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/spice/js/tinyscrollbar/css/tinyscrollbar.min.css">
+		<link rel="stylesheet" type="text/css" href="swiper/css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/myaccount.css">
+        <link rel="stylesheet" type="text/css" href="css/adaption-pad.css">
+		
+		<!-- 公共 JS 部分开始 -->
+        <script type="text/javascript" src="libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="libs/iscroll/iscroll.js"></script>
+        <script type="text/javascript" src="libs/spice/js/jquery.spice.js"></script>
+        <script type="text/javascript" src="libs/spice/js/kvScroll/jquery.kvScroll.js"></script>
+        <script type="text/javascript" src="libs/spice/js/tinyscrollbar/jquery.tinyscrollbar.min.js"></script>
+        <script type="text/javascript" src="libs/spice/js/citySelect/json/area.zh.min.js"></script>
+        <script type="text/javascript" src="libs/spice/js/citySelect/jquery.citySelect.min.js"></script>
+        <script type="text/javascript" src="libs/spice/js/dropdown/jquery.dropdown.min.js"></script>
+		<script type="text/javascript" src="libs/spice/js/calculateNum/jquery.calculateNum.min.js"></script>
+		<script type="text/javascript" src="libs/spice/js/lazyLoad/jquery.lazyLoad.min.js"></script>
+        <script type="text/javascript" src="libs/spice/js/cloudzoom/jquery.cloudzoom.min.js"></script>
+        <script type="text/javascript" src="libs/spice/js/placeholder/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="libs/spice/js/ymdSelect/jquery.ymdSelect.min.js"></script>
+        <script type="text/javascript" src="libs/handlebars/handlebars-v4.0.5.js"></script>
+        <script src="swiper/js/swiper-3.4.2.jquery.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="libs/respond/respond.min.js"></script>
+            <script type="text/javascript" src="libs/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+        <!-- 字体图标js，兼容低版本浏览器，不需要时可不引用 -->
+        <!--[if lte IE 7]>
+            <script type="text/javascript" src="libs/spice/js/jquery.spice.ie7.js"></script>
+        <![endif]-->
+        <!-- 公共 JS 部分结束 -->
+
+
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		
+		<!-- login系列所需js -->
+		<script src="js/login.js"></script>
+		
+		<!-- 在head标签中引入track.js文件,后期可以更改 -->
+		<script type="text/javascript" src="js/track.js"></script>
+		<!-- <script type="text/javascript">
+		    (function(i,s,o,g,r,a,m,n){
+		        i['moengage_object']=r;t={}; q = function(f){return function(){(i['moengage_q']=i['moengage_q']||[]).push({f:f,a:arguments});};};
+		        f = ['track_event','add_user_attribute','add_first_name','add_last_name','add_email','add_mobile',
+		        'add_user_name','add_gender','add_birthday','destroy_session','add_unique_user_id','moe_events','call_web_push','track','location_type_attribute'];
+		        for(k in f){t[f[k]]=q(f[k]);}
+		        a=s.createElement(o);m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m);
+		        i['moe']=i['moe'] || function(){n=arguments[0];return t;}; a.onload=function(){if(n){i[r] = moe(n);}};
+		    })(window,document,'script','https://cdn.moengage.com/webpush/moe_webSdk.min.latest.js','Moengage'); 
+		
+		    Moengage = moe({
+		        app_id:"H1R4ABOIDKN10RTX5QNS3CGX",//填写仪表盘的appid
+		        debug_logs: 1//改为1
+		    });
+		</script> -->
+		
+		<!-- 引入manifest.json文件到服务器的root路径下 -->
+		<link rel="manifest" href="manifest.json">
+		
+	</head>
+	<body>	
+		<div id="wrapper">
+			
+			<!-- 顶部导航部分  header-fixed-->
+			<header class="header">
+				<div class="top-nav">
+				    <div class="font-text-center">
+						<a href="#" class="nav-a">Speedo中国官方网站正式登陆，满300包邮</a>
+					</div>
+				</div>
+				<div class="bak-white bor-bottom">
+					<div class="nav-container float-clearfix">
+					    <nav class="nav-bar float-left">
+						    	<div class="navbar-header inline-block sam-logo">
+							        <a href="index.html" class="logo">speedo</a>
+							    </div>
+							    <div class="navbar-menu inline-block navbar-menu-pad">
+							        <ul class="nav nav-pills nav-pills-pad">
+							            <li>
+							            	<a href="lp-women-page.html" class="active"><span>女子</span></a>
+							            	<div class="sub-menu sub-menu1">
+							            		<ul>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">发现</a>
+							            					</li>
+							            					<li>
+							            						<a href="">新品推荐新品推荐新品推荐推荐</a>
+							            					</li>
+							            					<li>
+							            						<a href="">热卖款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">OUTLET</a>
+							            					</li>
+															<li>
+							            						<a href="">热卖款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">OUTLET</a>
+							            					</li>
+															<li>
+							            						<a href="">热卖款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">OUTLET</a>
+							            					</li>
+															<li>
+							            						<a href="">热卖款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">OUTLET</a>
+							            					</li>
+															<li>
+							            						<a href="">热卖款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">OUTLET</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">泳衣款式</a>
+							            					</li>
+							            					<li>
+							            						<a href="">连体式泳衣</a>
+							            					</li>
+							            					<li>
+							            						<a href="">分体泳衣</a>
+							            					</li>
+							            					<li>
+							            						<a href="">平角泳衣</a>
+							            					</li>
+							            					<li>
+							            						<a href="">及膝连体泳衣</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">装备</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳镜</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳帽</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳包</a>
+							            					</li>
+							            					<li>
+							            						<a href="">训练装备</a>
+							            					</li>
+							            					<li>
+							            						<a href="">其他</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">用途</a>
+							            					</li>
+							            					<li>
+							            						<a href="">竞赛</a>
+							            					</li>
+							            					<li>
+							            						<a href="">训练</a>
+							            					</li>
+							            					<li>
+							            						<a href="">健身</a>
+							            					</li>
+							            					<li>
+							            						<a href="">修身</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">推荐系列</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳感健身</a>
+							            					</li>
+							            					<li>
+							            						<a href="">纤姿系列</a>
+							            					</li>
+							            					<li>
+							            						<a href="">唯美系列</a>
+							            					</li>
+							            					<li>
+							            						<a href="">BOOM系列</a>
+							            					</li>
+							            					<li>
+							            						<a href="">鲨鱼皮</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            		</ul>
+							            	</div>
+							            </li>
+							            <li>
+							            	<a href="lp-men-page.html">男子</a>
+							            </li>
+							            <li><a href="lp-junior-page.html"  class="no-active">儿童</a></li>
+							            <li><a href="lp-goggles-page.html">泳镜</a></li>
+							            <li>
+							            	<a href="lp-accessories-page.html">装备</a>
+							            	<div class="sub-menu sub-menu1">
+							            		<ul>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">水下装备</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳帽</a>
+							            					</li>
+							            					<li>
+							            						<a href="">耳塞</a>
+							            					</li>
+							            					<li>
+							            						<a href="">鼻塞</a>
+							            					</li>
+							            					<li>
+							            						<a href="">训练装备</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">水上装备</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳包</a>
+							            					</li>
+							            					<li>
+							            						<a href="">泳巾</a>
+							            					</li>
+							            					<li>
+							            						<a href="">拖鞋</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            			<li>
+							            				<ul>
+							            					<li>
+							            						<a href="">可穿戴设备</a>
+							            					</li>
+							            					<li>
+							            						<a href="">MISFIT</a>
+							            					</li>
+							            				</ul>
+							            			</li>
+							            		</ul>
+							            	</div>
+							            </li>
+							            <li><a href="landingpage-speedofit-index.html">Speedo社区</a></li>
+							        </ul>
+							    </div>
+						</nav>
+
+						<div class="header-icon-search float-right events-header-icon">
+							<div class="cart-all">
+						    	<div class="user-icon nav-rg nav-icon-margins">
+						    		<ul class="float-clearfix user-rg">
+						    			<li><a><!-- <i class="icon icon-user"></i> -->xueyi...</a><span>退出</span></li>
+						    			<li><a><i class="icon icon-notice"></i></a></li>
+						    			<li><a><i class="icon icon-x"></i></a></li>
+									</ul>
+						    	</div>
+						    	<div class="top-cart events-minicart">
+									<a class="cart-posit">
+										<i class="icon icon-cart icon-cart-margin1"></i>
+										<p class="m-amounts"><i class="fa fa-caret-left"></i><span class="icon-amount">3</span></p>
+									</a>
+									<!--迷你购物车-->
+									<div class="header-right-submenu mini-cart-box events-minicart-res">
+										<i class="minicart-arrows"></i>
+										<div class="header-right-submenu-content">
+											<h3 class="header-login-title">您的购物篮<span><i>3</i>件商品</span></h3>
+											<div class="tinyscrollbar mini-cart-list events-minicart-scrollbar">
+												<div class="viewport">
+											        <div class="overview events-minicar-del">
+											            <ul>
+											            	<li class="float-clearfix">
+											            		<div class="mini-cart-img">
+											            			<a href="pdp.html"><img src="images/shopping-cart/1.jpg" width="58" height="88"></a>
+											            		</div>
+											            		<div class="mini-cart-details">
+											            			<a href="pdp.html">1Speedo男女近视泳镜</a>
+											            			<p class="minicart-unit-color">颜色：蓝色</p>
+											            			<p class="minicart-size">度数：200</p>
+											            			<p class="minicart-num">数量：1</p>
+											            			<div class="minicart-price"><p>&yen;799.00</p><i class="icon icon-delt"></i></div>
+											            		</div>
+											            	</li>
+											            	<li class="float-clearfix">
+											            		<div class="mini-cart-img">
+											            			<a href="pdp.html"><img src="images/shopping-cart/1.jpg" width="58" height="88"></a>
+											            		</div>
+											            		<div class="mini-cart-details">
+											            			<a href="pdp.html">2Speedo男女近视泳镜</a>
+											            			<p class="minicart-unit-color">颜色：蓝色</p>
+											            			<p class="minicart-size">度数：200</p>
+											            			<p class="minicart-num">数量：1</p>
+											            			<div class="minicart-price"><p>&yen;799.00</p><i class="icon icon-delt"></i></div>
+											            		</div>
+											            	</li>
+											            	<li class="float-clearfix">
+											            		<div class="mini-cart-img">
+											            			<a href="pdp.html"><img src="images/shopping-cart/1.jpg" width="58" height="88"></a>
+											            		</div>
+											            		<div class="mini-cart-details">
+											            			<a href="pdp.html">Speedo男女近视泳镜</a>
+											            			<p>颜色：蓝色</p>
+											            			<p>度数：200</p>
+											            			<p>数量：1</p>
+											            			<div class="minicart-price"><p>&yen;799.00</p><i class="icon icon-delt"></i></div>
+											            		</div>
+											            	</li>
+											            	<li class="float-clearfix">
+											            		<div class="mini-cart-img">
+											            			<a href="pdp.html"><img src="images/shopping-cart/1.jpg" width="58" height="88"></a>
+											            		</div>
+											            		<div class="mini-cart-details">
+											            			<a href="pdp.html">Speedo男女近视泳镜</a>
+											            			<p>颜色：蓝色</p>
+											            			<p>度数：200</p>
+											            			<p>数量：1</p>
+											            			<div class="minicart-price"><p>&yen;799.00</p><i class="icon icon-delt"></i></div>
+											            		</div>
+											            	</li>
+
+											            </ul>
+											        </div>
+										    	</div>
+											    <div class="scrollbar">
+											        <div class="track">
+											            <div class="thumb">
+											                <div class="end"></div>
+											            </div>
+											        </div>
+											    </div>
+											</div>
+											<div class="minicart-bottom-box float-clearfix">
+												<div class="accounts-but">
+													<span class="shopcost-title">总金额:</span>
+													<span class="shopcost-num">¥300.00</span>
+												</div>
+												<div class="float-right">
+													<a class="btn" href="shopping-cart.html"><i class="pic btn-point"></i>去结算</a>
+												</div>
+											</div>
+											<div class="del-icon">
+												<p><i class="icon icon-del-succeed"></i>成功删除</p>
+											</div>
+										</div>
+									</div>
+						    	</div>
+
+						    </div>
+
+						    <form class="search-paddings">
+						    	<div class="dropdown nav-search events-search">
+							        <div class="btn">
+								 		<input type="text" id="keywords" placeholder="搜索">
+								 		<span><i class="icon icon-search"></i></span>
+							        </div>
+							        <div class="tinyscrollbar sub-menu">
+			                            <div class="viewport">
+			                                <ul class="overview">
+			                                    <li><a>女士修身比基尼</a></li>
+			                                    <li><a>男士大码平角泳裤</a></li>
+			                                    <li><a>男士修身比基尼</a></li>
+			                                    <li><a>女士修身比基尼</a></li>
+			                                    <li><a>女士修身比基尼</a></li>
+			                                    <li><a>女士修身比基尼</a></li>
+			                                    <li><a>女士修身比基尼</a></li>
+			                                    <li><a>女士修身比基尼</a></li>
+			                                </ul>
+			                            </div>
+			                            <div class="scrollbar">
+			                                <div class="track">
+			                                    <div class="thumb">
+			                                        <div class="end"></div>
+			                                    </div>
+			                                </div>
+			                            </div>
+		                        	</div>
+							    </div>
+						    </form>
+
+
+						</div>
+						<div class="min-hader-search">
+							<button class="btn-bars float-left none block-xs events-btn-bar"><i class="pic pic-bar"></i></button>
+							<div class="block-mms float-left none "><span><i class="icon icon-search"></i></span></div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- 登录弹出层 -->
+			<script type="text/spice-template" id="dialog-login-template">
+				<div class="dialog dialog-login">
+				    <div class="dialog-container">
+				        <div class="row">
+				        	<div class="col-10-4">
+				        		<a href=""><img src="images/index/log-ceng.jpg"></a>
+				        	</div>
+				            <div class="col-10-6 padding-b">
+				            	<div class="login-diapadding">
+				            		<h2 class="dialog-title">登录<span>Speedo中国</span></h2>
+					                <div class="form-group row">
+					                    <label class="control-label col-10-2"><i class="icon icon-lg"></i></label>
+					                    <div class="form-input col-10-8 is-error">
+					                        <input type="text" placeholder="电子邮件地址／电话">
+					                        <span class="msg-block">
+											    <span>错误提示</span>
+											</span>
+					                    </div>
+					                </div>
+					                <div class="form-group row pd-top">
+					                    <label class="control-label col-10-2"><i class="icon icon-pass"></i></label>
+					                    <div class="form-input col-10-8">
+					                        <input type="text" placeholder="密码">
+					                    </div>
+					                </div>
+
+					                <div class="form-group font-size-form">
+					                	<label class="control-label pactive"><i class="pic pic-checked"></i>保持登录状态</label>
+					                	<a href="" class="a-style">忘记密码</a>
+					                </div>
+					                <div class="form-group rig-btna row">
+					                	<div class="submit-btn btn min-btn col-10-5">
+					                		<input type="submit" value="登录"><i class="pic btn-point"></i>
+						                </div>
+						                <div class="submit-btn btn min-btn col-10-5">
+					                		<input type="submit" value="创建新账户"><i class="pic btn-point"></i>
+						                </div>
+					                </div>
+					                <div class="form-group font-size-form">
+					                	<div class="pd-left20 inline-block">
+					                		<a href=""><i class="icon icon-x-weixin"></i>微信登录</a>
+					                	</div>
+					                	<div class="ed-left inline-block">
+					                		<a href=""><i class="icon icon-x-weibo"></i>微博登录</a>
+					                	</div>
+					                </div>
+				            	</div>
+
+				            </div>
+				        </div>
+				    </div>
+				    <i class="icon icon-close dialog-close">×</i>
+				</div>
+			</script>
+			<!-- 内容部分 -->
+			<section class="container">
+				<article class="full-article-login">
+					<div class="min-article bak-white padding-twos">
+						<div class="login-wid row pd-top40 pd-bottom100 rigister-left">
+							<div class="login-left col-10-5 new-login-tab1">
+								<div class="log-content">
+									<h2 class="log-sty-h2">密码登录</h2>
+									<div class="form-group row">
+					                    <div class="col-12-3 ">
+					                    	<label class="control-label">邮箱或手机</label>
+					                    </div>
+					                    <div class="form-input col-12-9">
+					                        <input type="text" id="phone-email" placeholder="请输入邮箱地址或手机号" />
+					                        <span class="msg-block">
+									            <span></span>
+									        </span>
+					                    </div>
+					                </div>
+					                <div class="form-group row">
+					                	 <div class="col-12-3">
+					                    	<label class="control-label">密码</label>
+					                    </div>
+
+					                    <div class="form-input col-12-9">
+					                        <input type="password" id="password" placeholder="请输入密码" />
+					                        <span class="msg-block">
+									            <span></span>
+									        </span>
+					                    </div>
+					                </div>
+					                <div class="form-group">
+					                    <div class="cont-text col-10-10 pd-left">
+					                    	<label class="form-checkbox pass-not is-active">
+					                    		<i class="pic pic-cheack" type="checkbox" /></i>保持登录状态
+					                    	</label>
+					                    	<a href="" class="password-a">忘记密码</a>
+					                    </div>
+					                </div>
+					                <div class="form-group">
+					                    <div class="cont-text col-10-10 pd-left pd-top20">
+					                    	<a class="btn"><i class="pic btn-point"></i>登录</a><a href="#" class="login-new-btn1">会员注册</a>
+					                    </div>
+					                </div>
+					                <div class="login-new-group">
+					                    <div class="cont-text col-10-10 pd-left">
+					                    	<a class="btn new-login-btn1">手机快速登录</a>
+					                    </div>
+					                </div>
+								</div>
+
+							</div>
+							<div class="login-left col-10-5 new-login-tab2">
+								<div class="log-content">
+									<h2 class="log-sty-h2">手机快速登录</h2>
+									<div class="form-group row">
+					                    <div class="col-12-3 ">
+					                    	<label class="control-label">手机</label>
+					                    </div>
+					                    <div class="form-input col-12-9">
+					                        <input type="text" id="phone-email" placeholder="请输入手机号" />
+					                        <span class="msg-block">
+									            <span></span>
+									        </span>
+					                    </div>
+					                </div>
+					                <div class="form-group row">
+					                	<div class="col-12-3">
+					                    	<label class="control-label">短信验证码</label>
+					                    </div>
+
+					                    <div class="form-input col-12-9 form-security float-clearfix form-security-new">
+										    <div class="content content_Email">
+									            <div class="email_addree">
+									                <input id="email" placeholder="请输入验证码" type="text">
+			                                        <span class="msg-block">
+			                				            <span></span>
+			                				        </span>
+									            </div>
+										    </div>
+									        <div class="Test_code">获取验证码</div>
+									       	<div class="Test_code re-send none">重新发送（59）</div>
+                                        	
+										</div>
+					                </div>
+					                <p class="login-new-p2">使用手机快速登陆即刻成为Speedo会员</p>
+					                <div class="form-group">
+					                    <div class="cont-text col-10-10 pd-left pd-top20">
+					                    	<a class="btn"><i class="pic btn-point"></i>登录</a><a href="#" class="login-new-btn1">会员注册</a>
+					                    </div>
+					                </div>
+					                <div class="login-new-group">
+					                    <div class="cont-text col-10-10 pd-left">
+					                    	<a class="btn new-login-btn2">密码登录</a>
+					                    </div>
+					                </div>
+								</div>
+
+							</div>
+							<div class="login-rg col-10-5">
+								<div class="log-rg-content">
+									<h2 class="log-sty-h2">合作网站登录</h2>
+									<div class="link-a login-new-link">
+					                	<a href=""><i class="pic pic-weixin"></i>微信</a>
+					                	<a href=""><i class="pic pic-weibo"></i>新浪微博</a>
+					                </div>
+									<div class="login-new-ewm">
+					                    <img src="images/login-ewm.jpg">
+					                </div>
+					                <div class="login-new-text">
+					                    <p>欢迎关注Speedo官方微信</p>
+					                    <p>您将有机会获得Speedo官方网站会员VIP尊享【折上8.5折】福利</p>
+					                </div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</article>
+
+			</section>
+
+
+			
+			<!-- 底部导航部分 -->
+			<footer class="footer">
+				<div class="footer-top footer-bak-gray">
+					<div class="footer-container row">
+						<div class="col-10-2 footer-tit attention-fast">
+							<h2>账户帮助</h2>
+							<ul>
+								<li><a href="register.html">如何注册</a></li>
+								<li><a href="Forget-password.html">密码修改</a></li>
+								<li><a href="order-inquiry.html">订单查询</a></li>
+							</ul>
+						</div>
+						<div class="col-10-2 footer-tit">
+							<h2>购物指南</h2>
+							<ul>
+								<li><a href="help-details.html">微信订购</a></li>
+								<li><a href="Size-guide.html">尺码说明</a></li>
+								<li><a href="Distribution_policy.html">送货政策</a></li>
+								<li><a href="Return_exchange_policy.html">退换政策</a></li>
+							</ul>
+						</div>
+						<div class="col-10-2 footer-tit">
+							<h2>关于我们</h2>
+							<ul>
+								<li><a href="brand-history.html">关于Speedo</a></li>
+								<li><a href="FAQ.html">常见问题</a></li>
+								<li><a href="company-info.html">公司信息</a></li>
+							</ul>
+						</div>
+						<div class="col-10-2 footer-tit">
+							<h2>联系我们</h2>
+							<ul>
+								<li><a href=""><i class="icon icon-notice-b"></i>在线客服</a><span>( 周一至周五9:00-22:00 )</span></li>
+								<li><a><i class="icon icon-iphone"></i>客服热线</a><span class="f-ipone">400－1234567</span><span>( 周一至周五9:00-18:00 )</span></li>
+								<li><a href="search-exclusive-shop.html"><i class="icon icon-store"></i>查找门店</a></li>
+							</ul>
+						</div>
+						<div class="col-10-2 footer-tit attention-last">
+							<h2>关注我们</h2>
+							<ul>
+								<li class="relative evers-hover">
+									<a href=""><i class="icon icon-weixin"></i>Speedo官方微信 </a>
+									<div class="hover-qrcode">
+										<i class="fa fa-caret-up"></i>
+										<div class="code-border">
+											<img src="images/index/qrcode.png">
+										</div>
+									</div>
+
+								</li>
+								<li><a href=""><i class="icon icon-weibo"></i>Speedo官方微博 </a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 底部工商局 -->
+				<div class="footer-bottom footer-bak-black">
+					<div class="footer-container footer-padding">
+						<div class="footer-service">
+							<a href="">服务条款</a> 
+							<a href=""><i class="border-o"></i>隐私条款</a>
+							<a href=""><i class="border-o"></i>站点地图</a> 
+						</div>
+						<div class="footer-bureau">
+							<ul class="inline-block">
+								<li>沪ICP120000000号</li>
+								<li><i class="border-o"></i><img src="images/common/icon-01.png" width="30" height="33" />上海工商</li>
+								<li><i class="border-o"></i><img src="images/common/icon-02.png" width="31" height="34" />沪公网备 </li>
+							</ul>
+							<p class="inline-block">Copyright © 2016 Speedo International. All rights reserved </p>
+						</div>
+					</div>
+				</div>
+				
+			</footer>
+			<!-- 公共部分放最下，如回到顶部，弹出层等 -->
+		</div>
+	</body>
+</html>
